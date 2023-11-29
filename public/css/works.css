@@ -1,0 +1,21 @@
+p {
+    text-indent: 3rem;
+    margin: 0;
+}
+
+blockquote {
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin-left: 3rem;
+}
+
+blockquote p {
+    text-indent: 0;
+    margin: 0;
+}
+
+#works-cited ~ p {
+    text-indent: -3em;
+    margin-left: 3em;
+}

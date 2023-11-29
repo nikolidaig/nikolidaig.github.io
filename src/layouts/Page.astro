@@ -1,0 +1,41 @@
+---
+const { frontmatter } = Astro.props;
+const name = "Nikoli Daigneault";
+---
+
+<html lang="en">
+    <head>
+        <title>{name + " - " + frontmatter.title}</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="/css/archie.css" />
+        <link rel="stylesheet" href="/css/styles.css" />
+        {
+            frontmatter.isWork && (
+                <link rel="stylesheet" href="/css/works.css" />
+            )
+        }
+    </head>
+
+    <body>
+        <div class="content">
+            <header>
+                <a href="/">{name}</a>
+                <nav>
+                    <a href="/#">Home</a>
+                    <a href="/works">Works</a>
+                    <a href="/resume">Resume</a>
+                </nav>
+            </header>
+            <slot />
+        </div>
+    </body>
+</html>
