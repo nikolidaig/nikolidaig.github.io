@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 const name = "Nikoli Daigneault";
+import '../styles/styles.css';
 ---
 
 <html lang="en">
@@ -16,7 +17,6 @@ const name = "Nikoli Daigneault";
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="/css/styles.css" />
         { frontmatter.isWork &&
             <style>
                 p {
