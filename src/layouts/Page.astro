@@ -16,12 +16,15 @@ const name = "Nikoli Daigneault";
             rel="stylesheet"
         />
 
-        <link rel="stylesheet" href="/css/archie.css" />
         <link rel="stylesheet" href="/css/styles.css" />
-        {
-            frontmatter.isWork && (
-                <link rel="stylesheet" href="/css/works.css" />
-            )
+        { frontmatter.isWork &&
+            <style>
+                p {
+                    text-indent: 3rem;
+                    margin: 0;
+                }
+
+            </style>
         }
     </head>
 

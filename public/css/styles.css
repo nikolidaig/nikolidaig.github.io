@@ -1,54 +1,40 @@
-:root {
-    --maincolor: #FC0;
-    --bordercl: #FC0;
-    --callouctcolor: #FC0;
-    --hovercolor: #FC0;
-    --font: "IBM Plex Serif", Helvetica, Arial, sans-serif;
-    --headerfont: "IBM Plex Sans", Helvetica, Arial, sans-serif;
-}
-
 * {
-    font-family: var(--font) !important;
+    font-family: "IBM Plex Serif", serif;
 }
 
 body {
-    font-size: 18px;
-    hyphens: auto;
+    color: #000;
+    background-color: #FAFAFA;
+    max-width: 800px;
+    margin: 0 auto;
     text-align: justify;
-    line-height: 1.35;
+    text-justify: inter-word;
+    hyphens: auto;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6, a {
-    font-family: var(--headerfont) !important;
-    text-align: left;
-}
-
-a, h2 {
-    border-bottom: none;
-    text-decoration: underline;
-    text-decoration-color: var(--maincolor);
-    text-decoration-thickness: 3px;
-}
-
-a:hover {
+a {
     color: inherit;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: #FFCC00;
+    text-decoration-thickness: 2px;
 }
 
-p, ul {
-    line-height: 1.75;
-    margin-top: .5em;
+a:hover, a:focus, a:active {
+    background-color: #FFCC00;
 }
 
-header {
-    line-height: inherit;
-}
-
-nav a {
-    margin: 0 .5rem;
-}
-
-h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
-    content: "";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, a {
+    font-family: "IBM Plex Sans", sans-serif;
+    line-height: 1.35;
+    text-align: left;
 }
 
 h1 {
@@ -56,13 +42,54 @@ h1 {
 }
 
 h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25em;
+}
+
+/* Target bio text */
+h1:empty~p {
     font-size: 1.5rem;
+    line-height: 1.75;
+    font-weight: 300;
 }
 
-h2, h3, p {
-    margin-bottom: .5em;
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
 }
 
-ul>li::before {
-    font-family: var(--headerfont);
+header a {
+    margin-right: 1rem;
+}
+
+header a:last-child {
+    margin-right: 0;
+}
+
+P, ul {
+    margin: 0 0.25em;
+}
+
+blockquote {
+    border: none;
+    color: inherit;
+    padding: 0;
+    margin: 0;
+    margin-left: 3rem;
+}
+
+blockquote p {
+    text-indent: 0;
+    margin: 0;
+}
+
+#works-cited~p {
+    text-indent: -3em;
+    margin-left: 3em;
 }
