@@ -41,6 +41,11 @@ import '../styles/styles.css';
             <slot />
         </div>
     </body>
+    { frontmatter.newTabLinks && 
+        <script>
+            for (let a of document.querySelectorAll(".content a")) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener noreferrer") }
+        </script>
+    }
 </html>
 
 <style>
