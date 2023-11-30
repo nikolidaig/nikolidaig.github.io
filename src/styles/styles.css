@@ -58,21 +58,6 @@ h1:empty~p {
     font-weight: 300;
 }
 
-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 2rem 0;
-}
-
-header a {
-    margin-right: 1rem;
-}
-
-header a:last-child {
-    margin-right: 0;
-}
-
 P, ul {
     margin: 0 0.25em;
 }
