@@ -38,12 +38,17 @@ import '../styles/styles.css';
                     <a href="/resume">Resume</a>
                 </nav>
             </header>
-            <slot />
+            <main>
+                <slot />
+            </main>
         </div>
     </body>
     { frontmatter.newTabLinks && 
         <script>
-            for (let a of document.querySelectorAll(".content a")) { a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener noreferrer") }
+            for (let a of document.querySelectorAll("main a")) {
+                a.setAttribute("target", "_blank");
+                a.setAttribute("rel", "noopener noreferrer");
+            }
         </script>
     }
 </html>
