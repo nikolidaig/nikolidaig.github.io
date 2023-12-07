@@ -3,11 +3,14 @@
 }
 
 body {
-    max-width: 900px;
     margin: 0 auto;
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
+}
+
+.container {
+    max-width: 75ch;
 }
 
 h1,
