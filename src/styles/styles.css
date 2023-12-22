@@ -4,8 +4,6 @@
 
 body {
     margin: 0 auto;
-    text-align: justify;
-    text-justify: inter-word;
     hyphens: auto;
 }
 
@@ -21,6 +19,7 @@ h5,
 h6, a {
     font-family: "IBM Plex Sans", sans-serif;
     text-align: left;
+    hyphens: none;
 }
 
 p {
