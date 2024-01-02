@@ -1,0 +1,28 @@
+h1 {
+    padding-top: 1rem;
+}
+
+p {
+    font-size: 15px !important;
+    text-indent: 2rem;
+    color: black;
+}
+
+blockquote {
+    border: none;
+    margin-left: 1rem;
+    font-style: normal !important;
+}
+
+blockquote p {
+    text-indent: 0;
+}
+
+blockquote p::before, blockquote p::after {
+    content: "" !important;
+}
+
+#works-cited~p {
+    text-indent: -2rem;
+    margin-left: 2rem;
+}

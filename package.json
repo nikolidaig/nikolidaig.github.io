@@ -1,21 +1,19 @@
 {
-  "name": "nikoli",
+  "name": "",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.3.1",
-    "@astrojs/mdx": "^1.1.5",
-    "@astrojs/tailwind": "^5.0.2",
+    "@astrojs/mdx": "^2.0.3",
+    "@astrojs/tailwind": "^5.1.0",
     "@tailwindcss/typography": "^0.5.10",
-    "astro": "^3.5.5",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^5.3.2"
+    "astro": "^4.0.6",
+    "tailwindcss": "^3.4.0"
   }
 }

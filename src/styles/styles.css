@@ -1,52 +1,8 @@
-* {
-    font-family: "IBM Plex Serif", serif;
-}
-
 body {
-    margin: 0 auto;
     hyphens: auto;
+    font-size: 15px;
 }
 
-.container {
-    max-width: 75ch;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6, a {
-    font-family: "IBM Plex Sans", sans-serif;
-    text-align: left;
-    hyphens: none;
-}
-
-p {
-    color: #000;
-}
-
-/* Target bio text */
-h1:empty~p {
-    font-size: 1.5rem;
-    line-height: 1.75;
-}
-
-blockquote {
-    border: none;
-    margin-left: 3rem;
-    font-style: normal !important;
-}
-
-blockquote p {
-    text-indent: 0;
-}
-
-blockquote p::before, blockquote p::after {
-    content: "" !important;
-}
-
-#works-cited~p {
-    text-indent: -3em;
-    margin-left: 3em;
+h1, h2, h3, a {
+    font-family: 'IBM Plex Sans', sans-serif;
 }
