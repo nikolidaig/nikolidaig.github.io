@@ -7,6 +7,10 @@ export default {
 			serif: ['"IBM Plex Serif"', 'sans-serif'],
 			sans: ['"IBM Plex Sans"', 'sans-serif'],
 		},
+		boxShadow: {
+			'box': '1px 1px 0',
+			'none': 'none',
+		},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
