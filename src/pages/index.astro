@@ -20,7 +20,7 @@ import Card from "../components/Card.astro";
         >. You may also contact me at <a class="underline" href="mailto:nmdaignea@coastal.edu">nmdaignea@coastal.edu</a>
     </p>
 
-    <div class="mt-8 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="max-w-prose mx-auto mt-8 grid gap-4">
         <Card>
             <span slot="header">Criticism</span>
             <span slot="title">Inescapable Capitalism in <cite>Tokyo Ueno Station</cite></span>
@@ -76,15 +76,5 @@ import Card from "../components/Card.astro";
             >
         </Card>
 
-        <Card>
-            <span slot="header">Criticism</span>
-            <span slot="title">Timeline of <cite>Tokyo Ueno Station</cite></span>
-            <span slot="description">
-                This timeline is a remediation of my paper on the novel Tokyo Ueno Station by Yū Miri.
-            </span>
-            <a href="/pdfs/daigneault-ueno-timeline.pdf" target="_blank" rel="noopener noreferrer" slot="link"
-                >Download PDF</a
-            >
-        </Card>
     </div>
 </Page>
