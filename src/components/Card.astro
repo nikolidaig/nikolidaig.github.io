@@ -2,21 +2,14 @@
 const props = Astro.props;
 ---
 
-<div class="bg-white border rounded border-slate-600">
-    {
-        !props.hasOwnProperty("no-header") && (
-            <div class="font-sans px-4 py-1 rounded-t border-b border-slate-600 text-slate-800">
-                <slot name="header" />
-            </div>
-        )
-    }
+<div class="bg-white border border-slate-600">
     <div class="p-4">
-        <h2 class="text-lg font-bold mb-2">
+        <h2 class="text-lg font-bold mb-1">
             <slot name="title" />
         </h2>
         <p>
             <slot name="description" />
         </p>
-        <div class="underline mt-2"><slot name="link" /></div>
+        <div class="underline underline-offset-2 decoration-amber-400 decoration-2 mt-2"><slot name="link" /></div>
     </div>
 </div>
