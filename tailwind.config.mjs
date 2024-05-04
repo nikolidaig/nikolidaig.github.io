@@ -8,10 +8,6 @@ export default {
 			sans: ['"IBM Plex Sans"', 'sans-serif'],
 			condensed: ['"IBM Plex Sans Condensed"', 'sans-serif'],
 		},
-		boxShadow: {
-			'box': '1px 1px 0',
-			'none': 'none',
-		},
 	},
 	plugins: [
 		require('@tailwindcss/typography'),
