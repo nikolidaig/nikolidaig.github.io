@@ -20,7 +20,6 @@ import "../styles/styles.css";
         <title>{props.title}</title>
     </head>
     <body>
-        {!props.hasOwnProperty("no-nav") && <NavBar />}
 
         <main class="prose text-black mx-auto">
             <slot />

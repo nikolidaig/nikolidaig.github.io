@@ -19,10 +19,10 @@ import "../styles/styles.css";
 
         <title>{props.title}</title>
     </head>
-    <body>
-        {!props.hasOwnProperty("no-nav") && <NavBar />}
+    <body class="container mx-auto">
+        <NavBar />
 
-        <main class="container mx-auto">
+        <main>
             <slot />
         </main>
     </body>
