@@ -4,5 +4,9 @@ body {
 }
 
 a {
+    font-weight: bold;
     text-decoration: underline;
+    text-decoration-thickness: 2px;
+    /* Amber 400 */
+    text-decoration-color: #fbbf24;
 }

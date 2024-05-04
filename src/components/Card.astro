@@ -2,12 +2,10 @@
 const props = Astro.props;
 ---
 
-<div class="bg-white border border-slate-600">
-    <div class="p-4">
-        <h2 class="text-lg font-bold mb-1">
-            <slot name="title" />
-        </h2>
-        <slot />
-        <div class="mt-2"><slot name="link" /></div>
-    </div>
+<div class="max-w-prose border-2 border-slate-600 p-4 flex flex-col gap-2">
+    <h2 class="text-xl font-bold">
+        <slot name="title" />
+    </h2>
+    <div class="grow"><slot /></div>
+    <div><slot name="link" /></div>
 </div>
