@@ -1,29 +1,10 @@
 ---
 const props = Astro.props;
-import NavBar from "../components/NavBar.astro";
-import "../styles/styles.css";
+import Page from "./Page.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-            rel="stylesheet"
-        />
-
-        <title>{props.title}</title>
-    </head>
-    <body class="container mx-auto">
-        <NavBar />
-
-        <main class="prose text-black mx-auto">
-            <slot />
-        </main>
-    </body>
-</html>
+<Page title={props.title}>
+    <main class="prose mx-auto text-black">
+        <slot />
+    </main>
+</Page>
