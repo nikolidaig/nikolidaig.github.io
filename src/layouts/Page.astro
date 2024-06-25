@@ -1,7 +1,6 @@
 ---
 const props = Astro.props;
 import NavBar from "../components/NavBar.astro";
-import "../styles/styles.css";
 ---
 
 <!doctype html>
@@ -9,11 +8,17 @@ import "../styles/styles.css";
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content={Astro.generator} />
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:ital,wght@0,500;1,500&display=swap"
             rel="stylesheet"
         />
 
