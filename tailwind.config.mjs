@@ -5,7 +5,6 @@ export default {
 	theme: {
 		fontFamily: {
 			sans: ['"IBM Plex Sans"', "sans-serif"],
-			cond: ['"IBM Plex Sans Condensed"', "sans-serif"],
 		},
 	},
 	plugins: [
