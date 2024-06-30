@@ -1,6 +1,8 @@
 ---
 import Page from "../layouts/Page.astro";
 import Card from "../components/Card.astro";
+import { getCollection } from "astro:content";
+const workEntries = await getCollection("works");
 ---
 
 <Page title="Nikoli Daigneault">
@@ -23,75 +25,25 @@ import Card from "../components/Card.astro";
     </p>
 
     <div class="flex flex-col gap-4 mb-8">
-        <Card>
-            <span slot="header">Composition</span>
-            <span slot="title">Historical Exigence in COVID-19 Diaries</span>
-            <a
-                class="underline"
-                href="/works/jotpy"
-                target="_blank"
-                rel="noopener noreferrer"
-                slot="link">Read Online</a
-            >
-            <p>
-                Arizona State University’s COVID-19 archive project, <cite
-                    >Journal of the Plague Year</cite
-                >
-                (JOTPY), invites public submissions documenting the pandemic to aid future historians.
-                I analyzed diaries uploaded to JOTPY and propose that instructing public contributors
-                to think about future historians produces more useful primary documents.
-            </p>
-        </Card>
-
-        <Card>
-            <span slot="header">Criticism</span>
-            <span slot="title">Inescapable Capitalism in <cite>Tokyo Ueno Station</cite></span>
-            <a
-                class="underline"
-                href="/works/ueno"
-                target="_blank"
-                rel="noopener noreferrer"
-                slot="link">Read Online</a
-            >
-            <p>
-                In this paper, I showed how Yū Miri’s 2014 novel <cite>Tokyo Ueno Station</cite> emphasizes
-                the inescapability of capitalism in modern Japan using the theories of Mark Fisher and
-                Jacques Derrida.
-            </p>
-        </Card>
-
-        <Card>
-            <span slot="header">Linguistics</span>
-            <span slot="title">Progressive <em>-s</em> Absence in African American English</span>
-            <a
-                class="underline"
-                href="/works/aae"
-                target="_blank"
-                rel="noopener noreferrer"
-                slot="link">Read Online</a
-            >
-            <p>
-                In a class-wide research project, speakers of African American English were surveyed
-                to find the rates of progressive <em>-s</em> absence in their speech. The results were
-                analyzed against demographic information about the speakers and past research.
-            </p>
-        </Card>
-
-        <Card>
-            <span slot="header">Composition</span>
-            <span slot="title">Stance, Position, and Enculturation</span>
-            <a
-                class="underline"
-                href="/works/enculturation"
-                target="_blank"
-                rel="noopener noreferrer"
-                slot="link">Read Online</a
-            >
-            <p>
-                This essay explores the politicization of language in response to Min-Zhan Lu’s
-                essay “From Silence to Words,” in which Lu reflected on her English education in
-                1950s China.
-            </p>
-        </Card>
+        {
+            workEntries.map((work) => (
+                <Card>
+                    <span slot="header">
+                        {work.data.field.charAt(0).toUpperCase() + work.data.field.slice(1)}
+                    </span>
+                    <span slot="title">{work.data.title}</span>
+                    <a
+                        class="underline"
+                        href={`/works/${work.slug}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        slot="link"
+                    >
+                        Read Online
+                    </a>
+                    <p>{work.data.description}</p>
+                </Card>
+            ))
+        }
     </div>
 </Page>
