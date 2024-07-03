@@ -32,13 +32,7 @@ const workEntries = await getCollection("works");
                         {work.data.field.charAt(0).toUpperCase() + work.data.field.slice(1)}
                     </span>
                     <span slot="title">{work.data.title}</span>
-                    <a
-                        class="underline"
-                        href={`/works/${work.slug}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        slot="link"
-                    >
+                    <a class="underline" href={`/works/${work.slug}`} slot="link">
                         Read Online
                     </a>
                     <p>{work.data.description}</p>
