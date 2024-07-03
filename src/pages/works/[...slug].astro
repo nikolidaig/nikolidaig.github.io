@@ -3,8 +3,8 @@ import { getCollection } from "astro:content";
 import WorkLayout from "../../layouts/WorkPage.astro";
 
 export async function getStaticPaths() {
-    const blogEntries = await getCollection("works");
-    return blogEntries.map((entry) => ({
+    const workEntries = await getCollection("works");
+    return workEntries.map((entry) => ({
         params: { slug: entry.slug },
         props: { entry },
     }));
