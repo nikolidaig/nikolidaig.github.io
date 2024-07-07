@@ -5,18 +5,19 @@ import Card from "../components/Card.astro";
 
 <Page title="Nikoli -- Resume">
     <div class="flex flex-col gap-4 my-4">
-        <h2 class="font-bold text-2xl"><a href="#education" id="education">Education</a></h2>
-
-        <Card>
+        <Card color="teal">
+            <span slot="header">Education</span>
             <span slot="title">Master of Arts in Writing</span>
             <em>Coastal Carolina University</em>, 2024 - 2025
             <ul class="list-disc list-inside">
-                <li>Graduate assistantship as a writing tutor and teaching assistant.</li>
-                <li>Expected graduation in December 2025.</li>
+                <li>Awarded an assistantship as teaching assistant and writing center tutor.</li>
+                <!-- <li>Teaches one section of first-year composition as Instructor of Record each semester.</li> -->
+                <li>Expected to graduate in December 2025.</li>
             </ul>
         </Card>
 
-        <Card>
+        <Card color="teal">
+            <span slot="header">Education</span>
             <span slot="title">Bachelor of Arts in English</span>
             <em>Coastal Carolina University</em>, 2023
             <ul class="list-disc list-inside">
@@ -25,65 +26,77 @@ import Card from "../components/Card.astro";
             </ul>
         </Card>
 
-        <h2 class="font-bold text-2xl"><a href="#experience" id="experience">Experience</a></h2>
+        <br />
 
-        <Card>
+        <Card color="green">
+            <span slot="header">Experience</span>
             <span slot="title">Writing Center Tutor</span>
             <em>CCU Writing Center</em>, 2024 - Present
             <ul class="list-disc list-inside">
                 <li>Offers feedback on student writing in one-on-one sessions.</li>
-                <li>Assists students in developing their writing process and strategies for revision.</li>
+                <li>
+                    Assists students in developing their writing process and strategies for
+                    revision.
+                </li>
             </ul>
         </Card>
 
-        <Card>
+        <Card color="green">
+            <span slot="header">Experience</span>
             <span slot="title">Foreign Language Tutor</span>
             <em>CCU Intercultural & Language Resource Center</em>, 2021 - 2023
             <ul class="list-disc list-inside">
                 <li>Tutored students in beginning and intermediate German language courses.</li>
-                <li>Cataloged and organized over 300 books, films, and other media in the center’s library</li>
+                <li>
+                    Cataloged and organized over 300 books, films, and other media in the center’s
+                    library
+                </li>
             </ul>
         </Card>
 
-        <Card>
+        <Card color="green">
+            <span slot="header">Experience</span>
             <span slot="title">Resident Advisor</span>
             <em>CCU University Housing</em>, 2020 - 2022
             <ul class="list-disc list-inside">
                 <li>Oversaw 40 first-year students in student dorms.</li>
                 <li>Served as a conduit to campus resources as they adjusted to college life.</li>
-                <li>Offered immediate support during emergencies to ensure a safe living environment.</li>
+                <li>
+                    Offered immediate support during emergencies to ensure a safe living
+                    environment.
+                </li>
             </ul>
         </Card>
 
-        <h2 class="font-bold text-2xl">
-            <a href="#achievements" id="achievements">Academic Achievements</a>
-        </h2>
+        <br>
 
-        <Card>
+        <Card color="red">
+            <span slot="header">Publication</span>
             <span slot="title">Publication in <cite>The Rage</cite> Zine</span>
             <em>CCU Women’s and Gender Studies</em>, Fall 2023
             <p>
-                An excerpt of my research on queer students’ compositions was published in the Fall 2023 issue of <cite
-                    >The Rage</cite
-                >, a student-led magazine.
+                An excerpt of my research on queer students’ compositions was published in the Fall
+                2023 issue of <cite>The Rage</cite>, a student-led magazine.
             </p>
         </Card>
 
-        <Card>
+        <Card color="red">
+            <span slot="header">Presentation</span>
             <span slot="title">Withrop University Interdisciplinary Conference</span>
             <em>Winthrop University</em>, February 2023
             <p>
-                Presented a literary criticism paper at Winthrop University’s the third annual interdisciplinary
-                conference.
+                Presented a literary criticism paper at Winthrop University’s the third annual
+                interdisciplinary conference.
             </p>
         </Card>
 
-        <Card>
+        <Card color="red">
+            <span slot="header">Award</span>
             <span slot="title">Roger K. Johansen Best Essay Contest for First Year Writing</span>
             <em> CCU Department of English</em>, 2019
             <p>
-                Awarded first place in a competition for the best student writing produced in English 101, 102, and 211
-                courses.
+                Awarded first place in a competition for the best student writing produced in
+                English 101, 102, and 211 courses.
             </p>
         </Card>
     </div>

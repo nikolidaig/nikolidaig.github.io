@@ -29,7 +29,7 @@ const workEntries = await getCollection("works");
             workEntries
                 .sort((work) => -work.data.order)
                 .map((work) => (
-                    <Card>
+                    <Card color={work.data.color}>
                         <span slot="header">
                             {work.data.field.charAt(0).toUpperCase() + work.data.field.slice(1)}
                         </span>
