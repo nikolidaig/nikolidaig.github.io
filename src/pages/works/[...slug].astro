@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import WorkLayout from "../../layouts/WorkPage.astro";
+import WorkPage from "../../layouts/WorkPage.astro";
 
 export async function getStaticPaths() {
     const workEntries = await getCollection("works");
@@ -14,6 +14,6 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<WorkLayout frontmatter={entry.data}>
+<WorkPage title={entry.data.title}>
     <Content />
-</WorkLayout>
+</WorkPage>
