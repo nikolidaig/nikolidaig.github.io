@@ -4,7 +4,8 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		fontFamily: {
-			sans: ['"IBM Plex Sans"', "sans-serif"],
+			sans: ['"Inter"', "sans-serif"],
+			serif: ['"IBM Plex Serif"', "sans-serif"],
 		},
 	},
 	plugins: [

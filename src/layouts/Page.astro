@@ -1,6 +1,5 @@
 ---
-const props = Astro.props;
-import NavBar from "../components/NavBar.astro";
+const { title } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,14 +12,18 @@ import NavBar from "../components/NavBar.astro";
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
             rel="stylesheet"
         />
 
-        <title>{props.title}</title>
+        <title>{title}</title>
     </head>
     <body class="container max-w-3xl mx-auto p-4">
-        <NavBar />
+        <nav class="py-4 flex flex-wrap gap-4 text-lg">
+            <a class="grow" href="/">Nikoli Daigneault</a>
+            <a href="/">Home</a>
+            <a href="/resume">Resume</a>
+        </nav>
 
         <slot />
     </body>

@@ -3,16 +3,9 @@ const props = Astro.props;
 ---
 
 <div class="border border-black p-4 flex flex-col gap-2">
-    {
-        Astro.slots.has("header") && (
-            <div class="text-sm">
-                <slot name="header" />
-            </div>
-        )
-    }
-    <h2 class="text-xl font-bold">
+    <h2 class="text-xl font-medium">
         <slot name="title" />
     </h2>
-    <div class="grow"><slot /></div>
+    <div class="grow font-serif"><slot /></div>
     <div><slot name="link" /></div>
 </div>
